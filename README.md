@@ -1,59 +1,64 @@
-Autonomous Robot Navigation in a Simulated T-Maze
-This repository contains two subprojects developed as part of a Robotics course: Behavior-Based Robotics (BBR) and Evolutionary Robotics (ER). Both projects aim to enable autonomous navigation of an E-Puck robot in a simulated T-maze environment using different robotics paradigms.
+# Autonomous Robot Navigation in a Simulated T-Maze
 
-🧠 Project Overview
-Simulator: Webots
+This repository contains two subprojects developed as part of a Robotics course: **Behavior-Based Robotics (BBR)** and **Evolutionary Robotics (ER)**. Both projects aim to enable autonomous navigation of an E-Puck robot in a simulated T-maze environment using different robotics paradigms.
 
-Robot: E-Puck
+---
 
-Language: Python
+## 🧠 Project Overview
 
-Paradigms: Behavior-Based Robotics (BBR) & Evolutionary Robotics (ER)
+- **Simulator**: Webots  
+- **Robot**: E-Puck  
+- **Language**: Python  
+- **Paradigms**: Behavior-Based Robotics (BBR) & Evolutionary Robotics (ER)  
+- **Core Techniques**: Modular controllers, Neural Networks, Genetic Algorithms  
 
-Core Techniques: Modular controllers, Neural Networks, Genetic Algorithms
+---
 
-📁 Repository Structure
-📂 BBR - Code/
-Behavior-Based Robotics implementation
+## 📁 Repository Structure
 
-controllers/NEW_bbr/NEW_bbr.py: Reactive controller using subsumption architecture for modular behaviors like wall-following and turning.
+### 📂 `BBR - Code/`  
+**Behavior-Based Robotics implementation**
 
-controllers/Supervisor_BBR/Supervisor_BBR.py: Supervisor to monitor and evaluate robot performance across trials.
+- `controllers/NEW_bbr/NEW_bbr.py`: Reactive controller using subsumption architecture for modular behaviors like wall-following and turning.  
+- `controllers/Supervisor_BBR/Supervisor_BBR.py`: Supervisor to monitor and evaluate robot performance across trials.  
+- `worlds/`: Webots world files and resources for T-maze simulation.  
+- `README.md`: Specific notes for running BBR setup (included in the folder).  
+- Hidden files like `.DS_Store` and `.wbproj` are auto-generated and can be ignored.  
 
-worlds/: Webots world files and resources for T-maze simulation.
+---
 
-README.md: Specific notes for running BBR setup (included in the folder).
+### 📂 `ER - Code/`  
+**Evolutionary Robotics implementation**
 
-Hidden files like .DS_Store and .wbproj are auto-generated and can be ignored.
+- `controllers/epuck_python - ER/epuck_python - ER.py`: Main controller with an evolved neural network for adaptive navigation.  
+- `controllers/epuck_python - ER/mlp.py`: Defines the Multi-Layer Perceptron (MLP) architecture used as the controller.  
+- `__pycache__/`: Python bytecode cache (not needed for execution).  
+- `README.md`: Notes specific to the ER implementation.  
+- Hidden files and metadata can be safely ignored.  
 
-📂 ER - Code/
-Evolutionary Robotics implementation
+---
 
-controllers/epuck_python - ER/epuck_python - ER.py: Main controller with an evolved neural network for adaptive navigation.
+## 🚀 Performance Highlights
 
-controllers/epuck_python - ER/mlp.py: Defines the Multi-Layer Perceptron (MLP) architecture used as the controller.
+- **BBR**: Manually tuned reactive behaviors using modular design principles.  
+- **ER**: Achieved 2× faster maze completion by evolving neural network controllers with multi-objective fitness functions.  
+- **Result**: ER approach outperformed BBR in both adaptability and efficiency.  
 
-__pycache__/: Python bytecode cache (not needed for execution).
+---
 
-README.md: Notes specific to the ER implementation.
+## 🛠️ How to Run
 
-Hidden files and metadata can be safely ignored.
+> **Requires**: Webots installed with Python controller support.
 
-🚀 Performance Highlights
-BBR: Manually tuned reactive behaviors using modular design principles.
+1. Open Webots and load the appropriate project from the `worlds/` directory.  
+2. Set the corresponding controller for the E-Puck robot in the simulation.  
+3. Run the simulation and monitor the robot’s navigation performance.  
+4. For ER: Use the MLP code with genetic evolution if rerunning training.  
 
-ER: Achieved 2× faster maze completion by evolving neural network controllers with multi-objective fitness functions.
+---
 
-Result: ER approach outperformed BBR in both adaptability and efficiency.
+## 👤 Authors
 
-🛠️ How to Run
-Requires: Webots installed with Python controller support.
+Developed by **Ziyaan Mir, Muhammad Imaad, Areej Ahmed and Haris Choudhury**
 
-Open Webots and load the appropriate project from the worlds/ directory.
-
-Set the corresponding controller for the E-Puck robot in the simulation.
-
-Run the simulation and monitor the robot’s navigation performance.
-
-For ER: Use the MLP code with genetic evolution if rerunning training.
-
+Final year project for a Robotics course at **Heriot-Watt University, Dubai Campus**
